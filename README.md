@@ -11,6 +11,7 @@ Thoughts are completely mine and do not reflect thoughts of my employer, friends
 ### Known
 
 - [FizzBuzz](https://m1yh3m.github.io/blog/fizzbuzz/)
+- [BucketSort](https://m1yh3m.github.io/blog/bucket-sort/)
 
 ### Invented
 
