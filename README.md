@@ -1,4 +1,4 @@
-# m1yh3m
+# blog 
 
 My technical blog
 
