@@ -81,5 +81,110 @@ Checkout two.node.js
 
 ---
 
-WIP
+There are many ways to solve this problem. This is a time waste from here on. Checkout [Issue#1](https://github.com/m1yh3m/blog/issues/1) for code review.
+
+## Object oriented way
+
+```javascript
+
+class Fizz {
+    constructor(n) {
+        this.n = n
+        this.v = n % 3 === 0 ? 'Fizz' : ''
+    }
+    toString() {
+        return this.v
+    }
+}
+
+class Buzz {
+    constructor(n) {
+        this.n = n
+        this.v = n % 5 === 0 ? 'Buzz' : ''
+    }
+    toString() {
+        return this.v
+    }
+}
+
+class Factory {
+    constructor(n) {
+        this.n = n
+    }
+    toString() {
+        return `${new Fizz(this.n)+new Buzz(this.n)||this.n}`
+    }
+}
+
+module.exports = Factory
+
+
+// invoke in node
+Array(20).fill(0).map((v, i) => i +1).forEach(i => console.log(new Factory(i).toString()))
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+```
+
+Checkout [oops.node.js](./oops.node.js)
+
+## Functional way
+
+This is the one I like, and I wrote it many moons ago.
+
+```javascrip
+
+var FizzBuzzOptions = [
+    function(num) { return num % 3 === 0 ? 'Fizz' : ''; },
+    function(num) { return num % 5 === 0 ? 'Buzz' : ''; }
+];
+
+var FizzBuzzEr = function(options, numbers){
+    numbers.forEach(i => {
+        let output = '';
+        output = options.reduce((a, x) => a + x(i), output) || i
+        console.log(output);
+    })
+}
+
+FizzBuzzEr(FizzBuzzOptions, Array(100).fill(0).map((v, i) => i + 1));
+
+```
+
+Here's the review:
+
+- Extensible
+- Flexible input range
+- Functional
+
+Let's discuss these quickly.
+
+Extensible.
+
+You can add another condition in FizzBuzzOptions array which will make the FizzBuzzEr function to obey it. This is without changing the implementation function. We have successfully achieved extensibility without changing logical implementation. This is decoupled.
+
+Of course, if we make a fundamental change in the logic, the code will have to be tossed out.
+
+Flexible input range: this one is obvious with introduction of `number` param.
+
+Functional.
+
+We are passing functions around and executing them. This is cool. 
 
