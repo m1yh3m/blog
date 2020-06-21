@@ -2,12 +2,14 @@
 
 Problem.
 
-Given a list of numbers from  1 to 100;
+Given a list of numbers from  1 to 100.
+
 Print:
-    Fizz for numbers divisible by 3
-    Buzz for numbers divisible by 5
-    FizzBuzz for numbers divisible by both 3 and 5
-    Number itself else
+
+-    Fizz for numbers divisible by 3
+-    Buzz for numbers divisible by 5
+-    FizzBuzz for numbers divisible by both 3 and 5
+-    Number itself else
 
 ```javascript
 
@@ -44,7 +46,7 @@ fizzbuzz(firstN(101))
 
 Checkout zero.node.js
 
-## A little comple problem.
+## A little complex problem.
 
 Instead of going from 1 to 100; try 0 to 100. This requires a bit of change in logic. Checkout one.node.js
 
