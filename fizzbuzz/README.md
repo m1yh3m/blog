@@ -6,10 +6,10 @@ Given a list of numbers from  1 to 100.
 
 Print:
 
--    Fizz for numbers divisible by 3
--    Buzz for numbers divisible by 5
--    FizzBuzz for numbers divisible by both 3 and 5
--    Number itself else
+-    `Fizz` for numbers divisible by 3
+-    `Buzz` for numbers divisible by 5
+-    `FizzBuzz` for numbers divisible by both 3 and 5
+-    `Number` itself else
 
 ```javascript
 
@@ -75,7 +75,11 @@ function fizzbuzz(numbers) {
 
 The issues here are that `FizzBuzz` doesn't have a space; and it doesn't start from 0.
 
-Trust me, `FizzBuzz` and starting from 1 make this problem trivial. Adding these two small conditions make it a bit more complex.
+Trust me, `FizzBuzz` and `starting from 1` make this problem trivial. Changin to `Fizz Buzz` and `starting from 0`: these two small conditions make it a bit more complex.
 
 Checkout two.node.js
+
+---
+
+WIP
 
