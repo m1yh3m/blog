@@ -9,4 +9,5 @@ Thoughts are completely mine and do not reflect thoughts of my employer, friends
 ----
 
 - [FizzBuzz](https://m1yh3m.github.io/blog/fizzbuzz/)
+- [razmatazz](https://m1yh3m.github.io/blog/razmatazz/)
 
