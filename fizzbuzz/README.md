@@ -13,7 +13,7 @@ Print:
 
 ```javascript
 
-// Generate numbers from 1 to 100
+// Generate numbers from 1 to N
 var firstN = number => new Array(number).fill(0).map((v, i) => i+1)
 
 ```
@@ -49,4 +49,33 @@ Checkout zero.node.js
 ## A little complex problem.
 
 Instead of going from 1 to 100; try 0 to 100. This requires a bit of change in logic. Checkout one.node.js
+
+## Reducing over conditions
+
+```javascript
+
+var firstN = number => new Array(number).fill(0).map((v, i) => i + 1)
+
+var conditions = [
+    i => i % 3 === 0 ? 'Fizz' : '',
+    i => i % 5 === 0 ? 'Buzz' : ''
+]
+
+function fizzbuzz(numbers) {
+    numbers.forEach(number => {
+        let val = conditions.reduce((outstr, fn) => outstr + fn(number), '')
+        console.log(val || number)
+    })
+}
+
+// run
+// fizzbuzz(firstN(100))
+
+```
+
+The issues here are that `FizzBuzz` doesn't have a space; and it doesn't start from 0.
+
+Trust me, `FizzBuzz` and starting from 1 make this problem trivial. Adding these two small conditions make it a bit more complex.
+
+Checkout two.node.js
 
