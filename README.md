@@ -22,4 +22,4 @@ Thoughts are completely mine and do not reflect thoughts of my employer, friends
 ## Posts
 
 - [The goal of a programmer](https://m1yh3m.github.io/blog/posts/the-goal-of-a-programmer/)
-
+- [Fixing git commits via reset and amend.](https://m1yh3m.github.io/blog/posts/git-fix-up-via-reset-amend/)
